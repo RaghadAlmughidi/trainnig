@@ -20,7 +20,7 @@ body {
 }
 
 .wrapper {
-    padding: 3% 10%;
+    padding: 3% 15%;
 }
 
 ul {
@@ -120,6 +120,7 @@ li a:hover {
 
 .mainSection_right {
     background-color: var(--VeryDarkBlue);
+    width: 30%;
 }
 
 .mainSetion_right_content {
