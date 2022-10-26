@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
-:root {
+ :root {
     --SoftOrange: hsl(35, 77%, 62%);
     --SoftRed: hsl(5, 85%, 63%);
     --OffWhite: hsl(36, 100%, 99%);
@@ -17,6 +17,7 @@ html {
 
 body {
     background-color: var(--OffWhite);
+    margin: 0 auto;
 }
 
 .wrapper {
@@ -31,12 +32,6 @@ li a {
     text-decoration: none;
     color: var(--VeryDarkBlue);
     cursor: pointer;
-}
-
-h1 {
-    font-size: 3.5rem;
-    color: var(--VeryDarkBlue);
-    font-weight: 700;
 }
 
 p {
@@ -97,6 +92,13 @@ li a:hover {
     margin-top: 2rem;
 }
 
+h1.mainSection_left_artical--heading {
+    font-size: 3rem;
+    color: var(--VeryDarkBlue);
+    font-weight: 700;
+    width: 70%;
+}
+
 .mainSection_left_artical_description--btn {
     color: var(--OffWhite);
     background-color: var(--SoftRed);
@@ -126,7 +128,7 @@ li a:hover {
 .mainSetion_right_content {
     padding: 1rem 1rem;
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, .8fr);
     align-items: center;
     justify-content: space-between;
 }
@@ -135,6 +137,7 @@ li a:hover {
     font-size: 3rem;
     color: var(--SoftOrange);
     font-weight: 700;
+    padding-bottom: 1.5rem;
 }
 
 .mainSetion_right_content hr {
@@ -174,6 +177,7 @@ li a:hover {
 
 .cardsSection_card {
     display: flex;
+    align-items: center;
 }
 
 .cardsSection_card--img img {
@@ -187,7 +191,7 @@ li a:hover {
     width: 100%;
 }
 
-.cardsSection_card--content {
+.cardsSection_card--content span {
     color: var(--GrayishBlue);
     font-size: 2rem;
     font-weight: 700;
@@ -213,4 +217,95 @@ li a:hover {
 .cardsSection_card--cardHeading a:hover {
     color: var(--SoftRed);
     cursor: pointer;
+}
+
+
+/*==============responsive devices==============*/
+
+@media screen and (max-width: 992px) {
+    .wrapper {
+        padding: 3% 2%;
+    }
+    .mainSection_right {
+        width: 40%;
+    }
+    .cardsSection_card {
+        margin-right: .20rem;
+    }
+    .cardsSection_card--cardDiscription {
+        padding-right: 0rem;
+        font-size: .8rem;
+    }
+    .cardsSection_card--cardHeading a {
+        font-size: .899rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header_nav {
+        display: none;
+    }
+    .wrapper {
+        padding: 3% 5%;
+    }
+    .mainSection {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .mainSection_right,
+    .mainSection_left {
+        width: 100%;
+    }
+    .mainSection_left_artical {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 2rem;
+    }
+    h1.mainSection_left_artical--heading {
+        width: 80%;
+    }
+    .cardsSection {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 2rem;
+    }
+    .cardsSection_card--cardHeading a {
+        font-size: 1.2rem;
+    }
+    .cardsSection_card--cardDiscription {
+        padding-right: 0rem;
+        font-size: 1rem;
+    }
+    .mainSection_left_artical_description {
+        padding: .5rem 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1.mainSection_left_artical--heading {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1.mainSection_left_artical--heading {
+        font-size: 2rem;
+    }
+    .mainSetion_right_content h2 {
+        font-size: 2.5rem;
+        padding-bottom: .5rem;
+    }
+    .leatesNews--heading a {
+        font-size: 1rem;
+    }
+    .cardsSection_card--content span {}
+    .cardsSection_card--cardHeading a {
+        font-size: 1rem;
+    }
+    .cardsSection_card--content span {
+        font-size: 1.5rem;
+        padding-bottom: .3rem;
+    }
+    .cardsSection_card--cardDiscription {
+        font-size: .8rem;
+    }
 }
